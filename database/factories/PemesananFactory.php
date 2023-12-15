@@ -20,7 +20,7 @@ class PemesananFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => \App\Models\User::factory(), // contoh penggunaan factory lain
+            'user_id' => \App\Models\User::factory(), 
             'nama_penumpang' => $this->faker->name,
             'stasiun_keberangkatan' => $this->faker->city,
             'stasiun_tujuan' => $this->faker->city,

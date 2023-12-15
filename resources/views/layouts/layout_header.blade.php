@@ -22,7 +22,7 @@
                         <a class="nav-link" href="{{ route('pemesanan_tiket') }}">Pemesanan Tiket</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Lokasi Kereta</a>
+                        <a class="nav-link" href="{{ route('lokasi_kereta') }}">Lokasi Kereta</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav mr-auto">

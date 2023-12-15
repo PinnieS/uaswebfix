@@ -72,6 +72,59 @@
                 </div>
             </div>
         </div>
+
+        <div class="content container mt-2">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    {{-- @foreach($riwayatPemesanan as $pemesanan) --}}
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                {{-- <h5 class="card-title">{{ $pemesanan->stasiun_keberangkatan }} ({{ $pemesanan->jumlah_tiket }})</h5> --}}
+                                <p class="card-text">Computer Line</p>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="card-text">
+                                            <strong>Waktu Keberangkatan:</strong> 
+                                            <?php
+                                                $randomHour = str_pad(rand(0, 23), 2, '0', STR_PAD_LEFT);
+                                                $randomMinute = str_pad(rand(0, 30) * 2, 2, '0', STR_PAD_LEFT);
+                                                $randomTime = $randomHour . ':' . $randomMinute;
+                                                echo $randomTime;
+                                            ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <strong>Durasi:</strong> 10j 30m
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <p class="card-text">
+                                            <strong>Stasiun Tiba:</strong> Disini
+                                        </p>
+                                        <p class="card-text">
+                                            <?php
+                                                $randomHour = str_pad(rand(0, 23), 2, '0', STR_PAD_LEFT);
+                                                $randomMinute = str_pad(rand(0, 30) * 2, 2, '0', STR_PAD_LEFT);
+                                                $randomTime = $randomHour . ':' . $randomMinute;
+                                                echo $randomTime;
+                                            ?>
+                                        </p>
+                                        <p class="card-text">
+                                            <strong>Harga:</strong> Rp 680.000,-
+                                        </p>
+                                    </div>
+                                </div>
+                                <p>
+                                    <button class="pesan-btn">Beli</button>
+                                </p>
+                                <p>
+                                    <strong>Tersisa:</strong> 1 kursi
+                                </p>
+                            </div>
+                        </div>
+                    {{-- @endforeach --}}
+                </div>
+            </div>
+        </div>
     </div>
     
     @include('layouts.layout_footer')

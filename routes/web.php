@@ -30,7 +30,7 @@ Route::post('/login/submit', [LoginController::class, 'submitLogin'])->name('log
 Route::get('/pemesanan-tiket', [PemesananTiketController::class, 'showForm'])->name('pemesanan_tiket');
 Route::get('/history_pemesanan', [HistoryPemesananController::class, 'show'])->name('history_pemesanan');
 Route::post('/pemesanan-tiket', [PemesananTiketController::class, 'prosesPemesanan'])->name('pemesanan_tiket.submit');
-Route::get('/history_pemesanan', [HistoryPemesananController::class, 'show'])->name('history_pemesanan');
+
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
@@ -42,6 +42,9 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::delete('/riwayat-pemesanan/{id}', [RiwayatPemesananController::class, 'delete'])->name('riwayat_pemesanan.delete');
+
+
+Route::get('/lokasi-kereta', [RiwayatPemesananController::class, 'lokasiKereta'])->name('lokasi_kereta');
 
 
 
