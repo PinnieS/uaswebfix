@@ -4,8 +4,10 @@
     <div id="booking" class="section">
         <div class="section-center">
             <div class="container">
-                <div class="col-md-6 offset-md-3">
+                <div class="card col-md-6 offset-md-3">
+                    <div class="card-body bg-dark text-white">
                     <div class="booking-form">
+                        
                         <form action="{{ route('pemesanan_tiket.submit') }}" method="post">
                             @csrf <!-- Tambahkan CSRF token untuk keamanan -->
                             <div class="form-group">
@@ -65,20 +67,26 @@
                                 </div>
                             </div>
                             <div class="form-btn text-center mt-3">
-                                <button type="submit" class="submit-btn btn btn-primary">Pesan Tiket</button>
+                                <button type="submit" class="submit-btn btn btn-dark">Pesan Tiket</button>
                             </div>
                         </form>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
+
+        {{-- test --}}
+
+        
 
         <div class="content container mt-2">
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     {{-- @foreach($riwayatPemesanan as $pemesanan) --}}
                         <div class="card mb-3">
-                            <div class="card-body">
+                            <div class="card-body bg-dark text-white">
                                 {{-- <h5 class="card-title">{{ $pemesanan->stasiun_keberangkatan }} ({{ $pemesanan->jumlah_tiket }})</h5> --}}
                                 <p class="card-text">Computer Line</p>
                                 <div class="row">
@@ -114,7 +122,7 @@
                                     </div>
                                 </div>
                                 <p>
-                                    <button class="pesan-btn">Beli</button>
+                                    <button class="btnpesan pesan-btn btn-dark">Beli</button>
                                 </p>
                                 <p>
                                     <strong>Tersisa:</strong> 1 kursi
@@ -125,7 +133,44 @@
                 </div>
             </div>
         </div>
+
+        {{-- test manggil data belom implementasiin --}}
+        <table border="1">
+            <thead>
+              <tr>
+                <th>Nama Penumpang</th>
+                <th>Stasiun Keberangkatan</th>
+                <th>Stasiun Tujuan</th>
+                <th>Tanggal Berangkat</th>
+                <th>Jumlah Tiket</th>
+                <th>Jumlah Dewasa</th>
+                <th>Jumlah Anak</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+              </tr>
+            </thead>
+            {{-- <tbody>
+                <!-- Isi tabel dengan data dari database -->
+              @foreach($nama_penumpang as $data)
+              <tr>
+                <td>{{ $data->nama_penumpang }}</td>
+                <td>{{ $data->stasiun_keberangkatan }}</td>
+                <td>{{ $data->stasiun_tujuan }}</td>
+                <td>{{ $data->tanggal_berangkat }}</td>
+                <td>{{ $data->jumlah_tiket }}</td>
+                <td>{{ $data->jumlah_dewasa }}</td>
+                <td>{{ $data->jumlah_anak }}</td>
+                <td>{{ $data->created_at }}</td>
+                <td>{{ $data->updated_at }}</td>
+              </tr>
+              @endforeach
+            </tbody> --}}
+          </table>
+          
+
     </div>
+
+    {{-- copasan --}}
     
     @include('layouts.layout_footer')
 @endsection

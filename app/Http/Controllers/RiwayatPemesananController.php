@@ -9,20 +9,23 @@ use Illuminate\Support\Facades\Auth;
 class RiwayatPemesananController extends Controller
 {
     public function riwayat()
-    {
-        $riwayatPemesanan = Pemesanan::where('user_id', auth()->id())->get();
-    
-        return view('riwayat_pemesanan', ['riwayatPemesanan' => $riwayatPemesanan]);
-        // return view('riwayat_pemesanan', compact('riwayatPemesanan'));
-        
-    }
+{
+    // Mengambil semua pemesanan (Pemesanan) yang terkait dengan pengguna yang sedang terautentikasi
+    $riwayatPemesanan = Pemesanan::where('user_id', auth()->id())->get();
+
+    // Memasukkan pemesanan yang diambil ke view 'riwayat_pemesanan'
+    return view('riwayat_pemesanan', ['riwayatPemesanan' => $riwayatPemesanan]);
+}
+
 
     public function riwayatcheck()
     {
+        // Memeriksa apakah pengguna telah terautentikasi
         if (Auth::check()) {
             return view('riwayat_pemesanan');
         } else {
-            return redirect()->route('login')->with('error', 'Silakan login terlebih dahulu cuyy.');
+            // Jika pengguna belum terautentikasi, redirect ke halaman login dengan pesan kesalahan
+            return redirect()->route('login')->with('error', 'Silakan login terlebih dahulu.');
         }
     }
 
