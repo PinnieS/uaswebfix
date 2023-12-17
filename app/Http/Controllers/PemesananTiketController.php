@@ -11,7 +11,10 @@ class PemesananTiketController extends Controller
     public function showForm()
     {
         if (Auth::check()) {
-            return view('pemesanan_tiket');
+
+            $pemesanans = Pemesanan::all();
+
+            return view('pemesanan_tiket', ['pemesanans' => $pemesanans]);;
         } else {
             return redirect()->route('login')->with('error', 'Silakan login terlebih dahulu cuyy.');
         }
@@ -20,6 +23,8 @@ class PemesananTiketController extends Controller
     public function prosesPemesanan(Request $request)
     {
    
+
+        
         $request->validate([
             'nama_penumpang' => 'required|string',
             'stasiun_keberangkatan' => 'required|string',
@@ -43,5 +48,7 @@ class PemesananTiketController extends Controller
 
         return view('history_pemesanan', ['dataPemesanan' => $pemesanan]);
     }
+
+    
 }
 

@@ -155,10 +155,10 @@
                                         <div class="kartu-test">
                                             <div class="kereta">
                                                 <h5 class="card-title">
-                                                    Kereta
+                                                    Keberangkatan
                                             </div>
                                             <div class="kereta">
-                                                <h5 class="card-title">Berangkat</h5>
+                                                <h5 class="card-title">Tujuan</h5>
                                             </div>
                                             <div class="kereta">
                                                 <h5>Durasi</h5>
@@ -182,7 +182,7 @@
             <!-- Card Tarif Kereta -->
     <div class="kartu_view_pesan container mt-2">
         <div class="row justify-content-center">
-            {{-- @foreach ($stasiun as $items) --}}
+            @foreach ($pemesanans as $pemesanan)
                 <div class="bungkus">
                     <div class="kartu mb-3">
                         <div class="gatau">
@@ -190,15 +190,14 @@
                                     <div class="kartu-test">
                                         <div class="kereta">
                                             <h5 class="card-title" style="weight">
-                                                GAMBIR (60)
-                                                {{-- {{ $items['stasiun_tiba'] }} --}}
+                                                {{ $pemesanan['stasiun_keberangkatan'] }}
                                             </h5>
                                             
-                                        {{-- <p class="card-text">Computer Line {{ $items['stasiun_tiba'] }}</p> --}}
+                                        {{-- <p class="card-text">{{ $pemesanan['stasiun_tujuan'] }}</p> --}}
                                         
                                         </div>
                                         <div class="kereta">
-                                            {{-- <h5 class="card-title">{{ $items['stasiun_tiba'] }}</h5> --}}
+                                            <h5 class="card-title">{{ $pemesanan['stasiun_tujuan'] }}</h5>
                                             <p class="card-text">
                                                 <?php
                                                 $randomHour = str_pad(rand(0, 23), 2, '0', STR_PAD_LEFT);
@@ -208,14 +207,13 @@
                                                 ?>
                                                 
                                             </p>
-                                            tanggal
                                         </div>
                                         <div class="kereta">
                                             <i class=" ikon fa-solid fa-circle-arrow-right"></i>
                                             <p class="card-text">10j 30m</p>
                                         </div>
                                         <div class="kereta">
-                                            Stasiun tiba disini
+                                            {{ $pemesanan['stasiun_tujuan'] }}
                                             <p class="card-text">
                                                 <?php
                                                 $randomHour = str_pad(rand(0, 23), 2, '0', STR_PAD_LEFT);
@@ -224,14 +222,14 @@
                                                 echo $randomTime;
                                                 ?>
                                             </p>
-                                            Tanggal disini
+                                            {{ $pemesanan['tanggal_berangkat'] }}
                                         </div>
                                         <div class="kereta">
                                             Rp 680.000,-
                                             <p>
                                                 <button class="pesan-btn">Beli</button>
                                             </p>
-                                            Tersisa 1 kursi
+                                            Sisa Kursi : {{ $pemesanan['jumlah_tiket'] }}
                                         </div>
                                     </div> 
                                 </div>
@@ -239,7 +237,7 @@
                         </div>
                     </div>
                 </div>
-            {{-- @endforeach --}}
+            @endforeach
     </div>
 
         {{-- jgn dibuka dl --}}
