@@ -105,6 +105,6 @@ body {
             align-items: center;
             margin-top: 5px;
 }
-.kartu_view_pesan {
-
+.kartudisplay {
+  height: 230px;
 }

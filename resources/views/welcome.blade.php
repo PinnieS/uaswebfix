@@ -58,7 +58,7 @@
                 <h2 class="text-center fontteks">STASIUN DENGAN PEMANDANGAN TERBAGUS</h2>
                 <div class="row">
                     <div class="col-xs-12 col-sm-4">
-                        <div class="card mb-3" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1');">
+                        <div class="card mb-3 kartudisplay" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i1.wp.com/handluggageonly.co.uk/wp-content/uploads/2015/05/IMG_2813-s.jpg?w=1600&ssl=1');">
                             <div class="card-category">City</div>
                             <div class="card-description">
                                 <h2>Home</h2>
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="card mb-3" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1');">
+                        <div class="card mb-3 kartudisplay" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/04/IMG_5589.jpg?w=1600&ssl=1');">
                             <div class="card-category">City</div>
                             <div class="card-description">
                                 <h2>Home</h2>
@@ -80,7 +80,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="card mb-3" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1');">
+                        <div class="card mb-3 kartudisplay" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://i0.wp.com/handluggageonly.co.uk/wp-content/uploads/2016/03/Positano-Weather.jpg?w=1600&ssl=1');">
                             <div class="card-category">City</div>
                             <div class="card-description">
                                 <h2>Home</h2>

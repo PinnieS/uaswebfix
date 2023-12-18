@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container-fluid row row-cols-1 row-cols-md-3 g-4">
+        @foreach ($pemesanans as $pemesanan)
         <div class="col">
             <div class="card  shadow-lg p-2 mb-4 bg-light rounded text-center">
                 <h2 class="card  shadow-lg p-2 mb-4 bg-white rounded text-center">Stasiun Palmerah</h2>
@@ -17,7 +18,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Stasiun Palmerah</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Stasiun {{ $pemesanan ['stasiun_keberangkatan'] }}</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
@@ -44,6 +45,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
         <div class="col">
             <div class="card  shadow-lg p-2 mb-4 bg-light rounded text-center">
